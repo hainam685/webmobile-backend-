@@ -27,9 +27,10 @@ mongoose.connect('mongodb+srv://nam444345_db_user:hainam2003@cluster0.yyx0th4.mo
 
 // Middleware
 app.use(cors({
-  origin: "https://webmobile-frontend-3dxk6si0c-hainam685s-projects.vercel.app", // domain frontend Vercel
+  origin: "https://webmobile-frontend-3dxk6si0c-hainam685s-projects.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
+  credentials: true,
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 app.use(express.json());
 
